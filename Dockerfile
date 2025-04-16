@@ -18,9 +18,7 @@ WORKDIR /pb
 
 COPY --from=downloader /pb/pocketbase /pb/pocketbase
 COPY pb_data /pb/pb_data
-COPY pb_public /pb/pb_public
 
 EXPOSE 8090
 
 CMD ["/pb/pocketbase", "serve", "--http=0.0.0.0:8090"]
-
